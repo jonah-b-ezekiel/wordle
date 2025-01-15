@@ -1,0 +1,4 @@
+my_versions
+__pycache__/
+data/feedback_lookup.pkl
+data/partition_map.pkl
