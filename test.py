@@ -1,5 +1,5 @@
 from utils.helpers import get_answers, get_guesses, get_feedback_lookup, get_partition_map, update_answers
-from guesser import get_guess
+from my_versions.v5 import get_guess
 
 def main():
     print("Starting Wordle Solver Testing...")
@@ -18,7 +18,7 @@ def main():
 
         answers_copy = answers.copy()
         for num_guesses in range(1, 10):
-            guess = get_guess(guesses, answers_copy, feedback_lookup, partition_map)
+            guess = get_guess(guesses, answers_copy, feedback_lookup, partition_map, num_guesses)
             feedback = feedback_lookup[guess][answer]
 
             if feedback == 'ggggg':

@@ -6,7 +6,8 @@ def get_guess(
     guesses: list[str],
     answers: list[str],
     feedback_lookup: dict[str, dict[str, str]],
-    partition_map: dict[str, dict[str, set[str]]]
+    partition_map: dict[str, dict[str, set[str]]],
+    guess_number: int,
 ) -> str:
     """
     Determines the next best guess for the Wordle solver.
@@ -27,7 +28,8 @@ def get_guess(
         - Outer dict: Maps a guess (str) to an inner dict.
         - Inner dict: Maps feedback strings (str) to sets of possible answers (set[str]).
         - Helps evaluate how well a guess partitions the remaining answers.
-
+    guess_number : int
+        
     Returns:
     -------
     str

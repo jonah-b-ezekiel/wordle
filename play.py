@@ -16,9 +16,10 @@ def main():
     partition_map = get_partition_map()
     answers = get_answers()
     guesses = get_guesses()
-
+    guess_number = 0
     while True:
-        suggested_guess = get_guess(guesses, answers, feedback_lookup, partition_map)
+        guess_number += 1
+        suggested_guess = get_guess(guesses, answers, feedback_lookup, partition_map, guess_number)
         print(f"\nSuggested guess: {suggested_guess} (Remaining answers: {len(answers)})")
 
         guess = input("Please input your guess (or type 'exit' to quit): ").strip().lower()
